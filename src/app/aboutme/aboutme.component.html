@@ -1,0 +1,80 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal data
+      </mat-panel-title>
+      <mat-panel-description>
+        Generic Things
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="First name" value="Ralph" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Age" value="23" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="D.O.B" value="03/08/95" disabled>
+    </mat-form-field>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Contact Details
+      </mat-panel-title>
+      <mat-panel-description>
+        Ways to Contact me
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" disabled value="dolfie@gmail.com">
+      </mat-form-field>
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="Cell No" disabled value="067 698 8513">
+        </mat-form-field></td>
+      </tr></table>
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="Instagram" value="@dolfiecpt" disabled>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="WhatsApp" value="071 789 3465" disabled>
+        </mat-form-field></td>
+      </tr></table>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Postal Address" disabled>3 Campus Ave</textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Address 2" disabled>Bellville South </textarea>
+        </mat-form-field>
+      </p>
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="City" value="Cape Town" disabled>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="State" value="Western Cape" disabled>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="7535" disabled>
+          <mat-hint align="end">{{postalCode.value.length}} / 4</mat-hint>
+        </mat-form-field></td>
+      </tr></table>
+    </form>
+
+
+
+  </mat-expansion-panel>
+</mat-accordion>
