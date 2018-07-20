@@ -1,0 +1,16 @@
+.example-responsive {
+  min-width: 150px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+img{
+  min-height: 10px;
+  max-height: 500px;
+  max-width: 500px;
+  min-width: 10px;
+}

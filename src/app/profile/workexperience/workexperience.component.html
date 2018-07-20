@@ -5,9 +5,9 @@
        fxLayout.xs="column"
        fxFlexFill >
 
-    <div fxFlex="35" class="sec1" fxFlex.xs="15">
+    <div fxLayout="column" fxFlex="35" fxFlex.xs="15" class="sec2" >
       <h2>Physics Tutor</h2>
-      <table class="table table-hover" align="center">
+      <table class="table table-hover" fxFlex="150">
       <thead>
         <tr>
           <th>Start Date</th>
@@ -21,16 +21,17 @@
         </tr>
         </tbody>
       </table>
-
     </div>
-    <div fxFlex="35" fxFlex.xs="15" class="sec2" >
-     <h2>Lab Assistant</h2>
-      <table class="table table-hover" align="center">
-      <thead>
-        <tr>
-          <th>Start Date</th>
-          <th>End Date</th>
-        </tr>
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <div fxLayout="column" fxFlex="35" fxFlex.xs="15" class="sec2" >
+     <h2 fxFlex="300">Lab Assistant</h2>
+      <table class="table table-hover" fxFlex="150">
+        <thead >
+          <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
         </thead>
         <tbody>
         <tr>
@@ -41,9 +42,11 @@
       </table>
     </div>
 
-    <div fxFlex="35" class="sec3" fxFlex.xs="15">
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <div fxLayout="column" fxFlex="35" fxFlex.xs="15" class="sec2" >
       <h2>Intern Developer</h2>
-      <table class="table table-hover" align="center">
+      <table class="table table-hover" fxFlex="150">
         <thead>
         <tr>
           <th>Start Date</th>

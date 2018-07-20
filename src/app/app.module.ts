@@ -5,47 +5,40 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core'
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MatAutocompleteModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
+  MatAutocompleteModule, MatButtonToggleModule, MatCardModule,
+  MatCheckboxModule, MatChipsModule, MatDatepickerModule,
+  MatDialogModule, MatExpansionModule, MatGridListModule,
+  MatIconModule, MatInputModule, MatListModule,
   MatMenuModule, MatNativeDateModule, MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule
+  MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule,
+  MatRippleModule, MatSelectModule, MatSidenavModule,
+  MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
+  MatTabsModule, MatToolbarModule, MatTooltipModule
 } from '@angular/material';
-import { AboutmeComponent } from './aboutme/aboutme.component';
-import { AcademicsComponent } from './academics/academics.component';
+import { AboutmeComponent } from './profile/aboutme/aboutme.component';
+import { AcademicsComponent } from './profile/academics/academics.component';
 import { MDBBootstrapModule } from '../../node_modules/angular-bootstrap-md';
 import { AgmCoreModule } from '@agm/core';
 import { WavesModule } from 'angular-bootstrap-md';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { WorkexperienceComponent } from './workexperience/workexperience.component';
+import { WorkexperienceComponent } from './profile/workexperience/workexperience.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CoverpageComponent } from './coverpage/coverpage.component';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutmeComponent,
     AcademicsComponent,
-    WorkexperienceComponent
+    WorkexperienceComponent,
+    ProfileComponent,
+    CoverpageComponent
   ],
   imports: [
+    RouterModule,
+    AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'your key here'
     }),
@@ -58,36 +51,13 @@ import { WorkexperienceComponent } from './workexperience/workexperience.compone
     MatTabsModule, MatToolbarModule, MatTooltipModule, MatPaginatorModule, MatSortModule
   ],
   exports: [
+    RouterModule,
     // Material
-    FlexLayoutModule,
-    WavesModule,
-    MatAutocompleteModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatSliderModule,
-    MatSnackBarModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatNativeDateModule,
-    MatTableModule
+    FlexLayoutModule, WavesModule, MatAutocompleteModule, MatButtonToggleModule,
+    MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatExpansionModule,
+    MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule,
+    MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule,
+    MatSnackBarModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatNativeDateModule, MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
