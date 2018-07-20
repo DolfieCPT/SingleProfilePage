@@ -26,6 +26,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CoverpageComponent } from './coverpage/coverpage.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import { RequestservicesComponent } from './profile/requestservices/requestservices.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {AppRoutingModule} from './app-routing.module';
     AcademicsComponent,
     WorkexperienceComponent,
     ProfileComponent,
-    CoverpageComponent
+    CoverpageComponent,
+    RequestservicesComponent
   ],
   imports: [
     RouterModule,
